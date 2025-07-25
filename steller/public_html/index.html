@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html llang="en" style="scroll-behavior: smooth;">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Aniqa Portfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Steller main styles -->
+    <link rel="stylesheet" href="assets/css/steller.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+<style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .socials {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .social-item i,
+    .social-item img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .social-item:hover i,
+    .social-item:hover img {
+        transform: scale(1.2);
+    }
+
+    .upwork-icon {
+        object-fit: contain;
+    }
+
+    /* FULL SCREEN CENTERING */
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+        text-align: center;
+    }
+
+    .infos {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1s ease-in-out;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .infos.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+       .about-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s ease-in-out;
+    }
+
+    .about-heading.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #61300e;
+    text-align: center;
+ margin-bottom: 20px; 
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+    
+
+    .edu-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .edu-sub, .edu-grade {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .about-text {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+    }
+
+    .about-text.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .about-heading {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.about-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 3px;
+    background-color: orange;
+    transition: width 0.4s ease;
+}
+
+.about-heading:hover::after {
+    width: 120px;
+}
+
+.custom-card {
+  transition: all 0.4s ease-in-out;
+  background-color: white;
+  cursor: pointer;
+  height: 100%;
+}
+
+.custom-card:hover {
+  background-color: orange;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .card-body i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.custom-card .card-body h5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.custom-card .card-body .card-text {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.custom-card:hover .card-text {
+  display: block;
+}
+
+.aniqa-brand {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px !important;
+  color: rgb(226, 125, 16) !important;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.aniqa-brand:hover {
+  color: rgb(107, 86, 2) !important;
+  cursor: pointer;
+}
+
+.skill-title {
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 1px;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.choose-heading {
+  font-size: 22px;
+  font-weight: bold;
+ 
+  color: #873f0f;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.skill-title:hover{
+     color: #ac7603;
+transform: scale(1.05);
+}
+
+.choose-heading:hover {
+   color: #333;
+  transform: scale(1.05);
+}
+ 
+.skill-title-bold {
+        color: orange;
+        font-weight: bold;
+    }
+
+  .subtitle:hover,
+  .section-title:hover {
+   color: #ff6f00;
+ transition: 0.02s ease;
+    cursor: pointer;
+  }
+#certificates .card h5 {
+    color: #ff6f00;
+}
+
+#certificates .section-title {
+    color: #ff6f00;
+}
+
+ .custom-container {
+        max-width: 92%;
+        margin: auto;}
+
+.heading-hover {
+ color: #ff6f00 !important;
+  transition: color 0.3s ease;
+}
+
+.heading-hover:hover {
+  color: rgb(183, 103, 5) !important;
+}
+
+.subtitle{
+  font-weight: bold;
+   font-weight: 700;
+  font-size: 28px;
+}
+
+.custom-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #fa6400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-circle i {
+  color: #fa6400;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-circle img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+
+/* Hover Effects */
+.social-circle:hover {
+  background-color: #fa6400;
+}
+
+.social-circle:hover i {
+  color: white;
+}
+
+.social-circle:hover img {
+  filter: brightness(0) invert(1); /* turns icon white */
+}
+
+
+
+</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+ <!-- Page navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+  <div class="container">
+    <!--  Aniqa Brand on the Left -->
+    <a class="navbar-brand aniqa-brand" href="#home">Aniqa</a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <!-- <li class="nav-item"><a class="btn btn-primary rounded ml-4" href="components.html">Components</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- End of page navibation -->
+
+
+    <!-- Page Header -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="infos" id="infos">
+                <h6 class="subtitle">hello,I'm</h6>
+                <h6 class="title">Aniqa Tabassum</h6>
+                <p></p>Flutter & Web Developer</p>
+
+                <div class="buttons pt-3">
+                    <a href="#contact" class="btn btn-primary rounded">HIRE ME</a>
+                    <a href="Aniqa_Resume.pdf" download class="btn btn-dark rounded">DOWNLOAD CV</a>
+                </div>
+
+                <div class="socials mt-4">
+                    <a class="social-item" href="https://www.linkedin.com/in/aniqa-tabassum-5b35a730b" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a class="social-item" href="https://github.com/aniqa999" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="social-item" href="https://www.upwork.com/freelancers/~0150b1bd2be28a04a1?mp_source=share" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/fa6400/upwork.png" alt="Upwork" class="upwork-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+  
+
+
+<!-- About section -->
+<section id="about" class="section mt-5 pt-5">
+    <div class="container">
+        <!-- Centered Heading with Animation -->
+        <h2 class="text-center mb-5 about-heading" data-aos="fade-down">About Me</h2>
+        <div class="row align-items-start">
+            <!-- Left: Education with Glass Boxes -->
+            <div class="col-md-6">
+                <div class="glass-box" data-aos="fade-right">
+                    <h5 class="edu-title">Riphah International University</h5>
+                    <p class="edu-sub">BSCS</p>
+                    <p class="edu-grade">SGPA: 3.82</p>
+                </div>
+                <div class="glass-box" data-aos="fade-right" data-aos-delay="100">
+                    <h5 class="edu-title">Crescent College</h5>
+                    <p class="edu-sub">Ics - Computer Science</p>
+                    <p class="edu-grade">Grade: A</p>
+                </div>
+                <div class="glass-box" data-aos="fade-right" data-aos-delay="200">
+                    <h5 class="edu-title">M N Education School</h5>
+                    <p class="edu-sub">Matriculation (Computer Science)</p>
+                    <p class="edu-grade">Grade: A+</p>
+                </div>
+            </div>
+
+            <!-- Right: Intro Content -->
+            <div class="col-md-6 about-text" id="aboutText" data-aos="fade-left">
+                <h6 class="title" style="color: orange;">Aniqa Tabassum</h6>
+                <p class="subtitle">Flutter & Web Developer | Simple. Fast. Elegant.</p>
+                <p>
+                    I am a passionate and detail-oriented Flutter Developer with expertise in building cross-platform mobile applications using Dart, Flutter, and Firebase.
+                    Alongside mobile development, I also have strong proficiency in MERN Stack technologies including HTML, CSS, JavaScript, Node.js,
+                    Express.js, and MongoDB. I’m a quick learner, adaptable to new tools, and eager to contribute to both mobile and web development projects in a
+                    dynamic team environment.
+                </p>
+                <a href="Aniqa_Resume.pdf" download class="btn btn-primary rounded mt-3">DOWNLOAD CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service section -->
+<section id="service" class="section">
+  <div class="container text-center">
+    <h6 class="subtitle">Service</h6>
+    <h6 class="section-title mb-4" style="color: orange; font-weight: bold;">What I Do</h6>
+    <p class="mb-5 pb-4">I develop intelligent and scalable digital solutions that empower businesses to thrive and lead in the digital landscape.</p>
+
+    <div class="row">
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-mobile"></i> <!-- Flutter App -->
+            <h5>Flutter App Development</h5>
+            <p class="card-text">High-performance mobile apps for Android & iOS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-world"></i> <!-- Web App -->
+            <h5>Web App Development</h5>
+            <p class="card-text">Custom, scalable, and responsive web applications tailored to your business.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-layout"></i> <!-- UI/UX -->
+            <h5>UI/UX Design</h5>
+            <p class="card-text">Clean, intuitive, and user-focused interface design for web and mobile.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-headphone-alt"></i> <!-- AI Integration -->
+            <h5>AI Integration</h5>
+            <p class="card-text">Smart features powered by AI — including chatbots, recommendations & automation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-server"></i> <!-- Java App -->
+            <h5>Java Application Development</h5>
+            <p class="card-text">Robust desktop applications built in Java — from management systems to automation tools.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="custom-card card border">
+          <div class="card-body">
+            <i class="icon ti-stats-up"></i> <!-- Performance -->
+            <h5>Performance Optimization</h5>
+            <p class="card-text">Speed, responsiveness, and seamless user experience across all platforms.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End of Section -->
+
+
+<!-- Skills section -->
+<section class="section">
+    <div class="container text-center">
+        <h6 class="subtitle skill-title">Skills</h6>
+        <h6 class="section-title mb-4 choose-heading">Delivering Smart, Reliable & Future-Ready Solutions</h6>
+
+        <p class="mb-5 pb-4">I bring a powerful mix of technical expertise, creative thinking, and a user-focused mindset <br> to every project—ensuring smart, scalable, and future-ready digital solutions.</p>
+
+        <div class="row text-left">
+            <div class="col-sm-6">
+                <h6 class="mb-3"><strong class="skill-title-bold">Languages Specialist</strong> | C, C++, Java, Python, DSA , Dart </h6>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h6 class="mb-3"><strong class="skill-title-bold">Web Developer</strong> | HTML, CSS, JavaScript, Bootstrap</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h6 class="mb-3"><strong class="skill-title-bold">Flutter App Developer</strong> | Expert in UI/UX Design, Animations, Custom Widgets, Responsive Layouts, Navigation </h6>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h6 class="mb-3"><strong class="skill-title-bold">Server-side Expert</strong> | Node.js, Express.js, Firebase, MongoDB, MySQL, Cloud Firestore, SQLite, Shared Preferences | Robust APIs & Seamless Integrations</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- End of Skills sections -->
+
+
+    <!-- Portfolio section -->
+   <section id="portfolio" class="section">
+    <div class="container text-center">
+        <h6 class="subtitle">Portfolio</h6>
+        <h6 class="section-title mb-4">Check My Wonderful Works</h6>
+
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="assets/rent.JPG" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>RentHive <br> </h5>
+                            <p class="project-desc">A Flutter-based mobile app for seamless rental and tenant management.</p>
+                            <a href="https://github.com/aniqa999/rent_hive_app" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/aniqa-tabassum-5b35a730b_flutter-mobileappdevelopment-firebase-activity-7353824336073355266-R0y7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7uiJcBiNiHPwm6KWKHT2NBMFUz7AdhpfI" target="_blank">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GlamGarb-->
+                <div class="img-wrapper">
+                    <img src="assets/Glam.JPG" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                        <h5>GlamGarb</h5>
+                    <p >
+                    A stylish fashion web app with dynamic features and smooth user experience.
+                    </p>
+
+                            <a href="https://github.com/aniqa999/GlamGarb" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/aniqa-tabassum-5b35a730b_webapp-ecommerce-onlinestore-activity-7354480268352598017-QHfk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7uiJcBiNiHPwm6KWKHT2NBMFUz7AdhpfI" target="_blank">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                   <!-- Solaris-->
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="assets/solaris.JPG" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                          <h5>Solaris</h5>
+                        <p >
+                        A dynamic Java-based desktop app for solar system e-commerce with ROI, payments, orders, and full feature control.
+                        </p>
+                            <a href="https://github.com/aniqa999/Solaris" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                          <a href="solaris.pdf" download>
+    <i class="fas fa-file-alt"></i> 
+</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                         <!-- PakWheels-->
+                <div class="img-wrapper">
+                    <img src="assets/vehicle.JPG" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>PakAutoHub</h5>
+                            <p class="project-desc">Responsive web app inspired by PakWheels, built using cutting-edge web technologies for seamless user interaction & automotive listings.</p>
+                            <a href="https://github.com/aniqa999/PakAutoHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/your-video-link" target="_blank">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                     
+                       <!-- Operating System --> 
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                 
+                    <img src="assets/Capture.JPG" alt="">
+                    <div class="overlay">
+                            <div class="overlay-infos">
+                            <h5>Operating System</h5>
+                            <p class="project-desc">OS project featuring memory management, paging, fork(), and CPU scheduling.</p>
+                            <a href="https://github.com/aniqa999/Operating-System" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/aniqa-tabassum-5b35a730b_java-operatingsystem-memorymanagement-activity-7354464189031006209-v7-_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7uiJcBiNiHPwm6KWKHT2NBMFUz7AdhpfI" target="_blank">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                       
+                    <!-- Artificial Intelligence--> 
+                <div class="img-wrapper">
+                   
+                  <img src="assets/ailane.JPG" alt="">
+                    <div class="overlay">
+
+                         <div class="overlay-infos">
+                            <h5>Lane Detection</h5>
+                            <p class="project-desc">AI lane detection in Python using deep learning – complete training & implementation.</p>
+                            <a href="https://github.com/aniqa999/Lane_Detection" target="_blank">
+
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/aniqa-tabassum-5b35a730b_lanevisionai-machinelearning-deeplearning-activity-7354472681922084865--rWB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7uiJcBiNiHPwm6KWKHT2NBMFUz7AdhpfI" target="_blank">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- End of portfolio section -->
+
+
+    <!-- Testmonial Section -->
+    <!-- <section id="testmonial" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Testmonial</h6>
+            <h6 class="section-title mb-4">What People Say About Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-1.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Emma Re</h1>
+                                <h1 class="subtitle">Graphic Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-2.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">James Bert</h1>
+                                <h1 class="subtitle">Web Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-3.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Michael Abra</h1>
+                                <h1 class="subtitle">Web Developer</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End of testmonial section -->
+
+
+<section id="certificates" class="section">
+    <div class="container text-center">
+        <h6 class="subtitle">Certificates</h6>
+        <h6 class="section-title mb-4">What I’ve Achieved</h6>
+        <p class="mb-5 pb-4">
+            Here are some of my certifications that reflect my learning and achievements. <br>
+            Each certificate showcases a unique skill and milestone.
+        </p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="card mx-auto rounded shadow" style="max-width: 500px;">
+                        <div class="card-body p-3">
+                            <img src="assets/Building-RESTful-APIs-with-Node.js-and-Express.jpg/Building RESTful APIs with Node.js and Express_page-0001.jpg"
+                                alt="Certificate 1"
+                                style="width: 100%; height: 280px; object-fit: contain; border-radius: 8px;">
+                            <h5 class="mt-3 mb-1">RESTful APIs with Node.js and Express</h5>
+<p style="font-size: 14px;">
+   Coursera-certified course on designing and developing robust RESTful APIs using Node.js and Express.
+<br>
+    Gained hands-on experience with routing, middleware, CRUD operations, and connecting APIs to databases.
+</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card mx-auto rounded shadow" style="max-width: 500px;">
+                        <div class="card-body p-3">
+                            <img src="assets/Developing-Back-End-Apps-with-Node.js-and-Express.jpg/Developing Back-End Apps with Node.js and Express_page-0001.jpg"
+                                alt="Certificate 2"
+                                style="width: 100%; height: 280px; object-fit: contain; border-radius: 8px;">
+                           <h5 class="mt-3 mb-1">Back-End Apps with Node.js and Express</h5>
+<p style="font-size: 14px;">
+    Learned to build secure and scalable back-end applications using Node.js and the Express framework.  <br>
+    Gained practical experience in creating APIs, managing server-side logic, handling routing, authentication, and connecting with databases for dynamic data handling.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card mx-auto rounded shadow" style="max-width: 500px;">
+                        <div class="card-body p-3">
+                            <img src="assets/HTML-CSS-IN-DEPTH.jpg/HTML CSS IN DEPTH_page-0001.jpg"
+                                alt="Certificate 3"
+                                style="width: 100%; height: 280px; object-fit: contain; border-radius: 8px;">
+                           <h5 class="mt-3 mb-1">HTML & CSS In-Depth</h5>
+<p style="font-size: 14px;">
+    Mastered front-end structure and styling by exploring advanced HTML elements and modern CSS techniques. <br> 
+    Learned to build responsive layouts, implement animations, transitions, and create visually appealing user interfaces.
+</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card mx-auto rounded shadow" style="max-width: 500px;">
+                        <div class="card-body p-3">
+                            <img src="assets/artificial-intelligence-fundamentals.png"
+                                alt="Certificate 4"
+                                style="width: 100%; height: 280px; object-fit: contain; border-radius: 8px;">
+                            <h5 class="mt-3 mb-1">AI Fundamentals</h5>
+<p style="font-size: 14px;">
+    Completed an introductory course in Artificial Intelligence, covering core concepts of machine learning, supervised and unsupervised learning, and ethical considerations in AI development.
+</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Blog Section -->
+    <!-- <section id="blog" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">My Blogs</h6>
+            <h6 class="section-title mb-4">Latest News</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Designe for Everyone</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Layouts</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap Framework</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Hire me section -->
+    <!-- <section class="bg-gray p-0 section">
+        <div class="container">
+            <div class="card bg-primary">
+                <div class="card-body text-light">
+                    <div class="row align-items-center">
+                        <div class="col-sm-9 text-center text-sm-left">
+                            <h5 class="mt-3">Hire Me For Your Project</h5>
+                            <p class="mb-3">Accusantium labore nostrum similique quisquam.</p>
+                        </div>
+                        <div class="col-sm-3 text-center text-sm-right">
+                            <button class="btn btn-light rounded">Hire Me!</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>       -->
+    <!-- End od Hire me section. -->
+
+
+
+<!-- Hire me section -->
+<section class="bg-gray p-0 section">
+    <div class="custom-container">
+        <div class="card bg-primary px-4">
+            <div class="card-body text-light">
+                <div class="row align-items-center">
+                    <div class="col-sm-9 text-center text-sm-left">
+                        <h5 class="mt-3">Ready to Collaborate?</h5>
+                        <p class="mb-3">Looking for smart, scalable, and creative digital solutions? Let's work together and bring your vision to life.</p>
+                    </div>
+                    <div class="col-sm-3 text-center text-sm-right">
+                        <a href="#contact" class="btn btn-light rounded">Hire Me!</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+<!-- End of Hire me section. -->
+
+
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="position-relative section">
+        <div class="container text-center">
+            <h6 class="subtitle">Contact</h6>
+            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p> 12345 Fake ST NoWhere AB Country</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>(123) 456-7890</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>info@website.com</p>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>  
+        <div id="map">
+            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
+        </div>      
+    </section> -->
+    
+    <section id="contact" class="position-relative section">
+    <div class="container text-center">
+        <h6 class="subtitle">Contact</h6>
+        <h6 class="section-title mb-4 heading-hover">Let’s Build Something Amazing Together</h6>
+  <p class="mb-5 pb-4">
+  Got an idea? Let’s build something amazing—together.
+</p>
+
+
+        <div class="contact text-left">
+            <div class="form">
+                <h6 class="subtitle">Available 24/7</h6>
+                <h6 class="section-title mb-4">Get In Touch</h6>
+               <form action="https://formsubmit.co/aniqatabassum409@gmail.com" method="POST" data-skip-recaptcha="true">
+    <!-- Hidden inputs -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_subject" value="New Contact Request">
+    <input type="hidden" name="_autoresponse" value="Thank you for contacting me. I will get back to you shortly.">
+
+    <!-- Visible inputs -->
+    <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+</form>
+
+            </div>
+
+           <div class="contact-infos">
+    <div class="item">
+        <i class="ti-location-pin"></i>
+        <div>
+            <h5>Location</h5>
+            <p> Lahore, Pakistan</p>
+        </div>
+    </div>
+    <div class="item">
+        <i class="ti-mobile"></i>
+        <div>
+            <h5>Phone Number</h5>
+            <p>+92 300 1234567</p>
+        </div>
+    </div>
+    <div class="item">
+        <i class="ti-email"></i>
+        <div class="mb-0">
+            <h5>Email Address</h5>
+            <p>aniqatabassum409@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map">
+        <iframe src="https://snazzymaps.com/embed/61257"></iframe>
+    </div>
+</section>
+    <!-- End of Contact Section -->
+
+
+
+    <!-- Page Footer -->
+    <!-- <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  -->
+
+  <footer class="page-footer">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-sm-6">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Aniqa Tabassum. All rights reserved.</p>
+        <p>Email: <a href="mailto:aniqatabassum@example.com">aniqatabassum@example.com</a></p>
+      </div>
+
+<div class="col-sm-6 text-end">
+  <div class="custom-socials mt-4">
+    <a href="https://www.linkedin.com/in/aniqa-tabassum-5b35a730b" target="_blank" class="social-circle">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/aniqa999" target="_blank" class="social-circle">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.upwork.com/freelancers/~0150b1bd2be28a04a1?mp_source=share" target="_blank" class="social-circle upwork-icon-link">
+      <img src="https://img.icons8.com/ios-filled/20/fa6400/upwork.png" alt="Upwork" />
+    </a>
+  </div>
+</div>
+
+</div>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+    <!-- End of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- steller js -->
+    <script src="assets/js/steller.js"></script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const infos = document.getElementById("infos");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    infos.classList.add("animate");
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(infos);
+    });
+</script>
+
+<!-- JavaScript for scroll animation -->
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const about = document.getElementById("aboutText");
+        const heading = document.querySelector(".about-heading");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    about.classList.add("animate");
+                    heading.classList.add("animate");
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(about);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    // Animate About Section on Scroll (when it enters the viewport)
+    const observerOptions = {
+        threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            } else {
+                entry.target.classList.remove('animate'); // Optional: reset when out of view
+            }
+        });
+    }, observerOptions);
+
+    // Observe both about-heading and about-text
+    const aboutHeading = document.querySelector('.about-heading');
+    const aboutText = document.querySelector('.about-text');
+
+    if (aboutHeading) observer.observe(aboutHeading);
+    if (aboutText) observer.observe(aboutText);
+</script>
+
+
+</body>
+</html>
