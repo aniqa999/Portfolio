@@ -327,17 +327,34 @@ transform: scale(1.05);
   filter: brightness(0) invert(1); /* turns icon white */
 }
 
+
 @media (max-width: 767px) {
   .glass-box {
-    margin: 0 auto;            /* Center horizontally */
-    text-align: center;        /* Center text inside */
-    max-width: 90%;            /* Avoid full-width stretching */
+    margin: 10px auto;
+    text-align: center;
+    max-width: 95%;
+    display: block;
   }
 
   .edu-title,
   .edu-sub,
   .edu-grade {
     text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .col-md-6 {
+    width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row.align-items-start {
+    flex-direction: column;
   }
 }
 
@@ -997,14 +1014,15 @@ transform: scale(1.05);
     <div class="container text-center">
         <h6 class="subtitle">Contact</h6>
         <h6 class="section-title mb-4 heading-hover">Let’s Build Something Amazing Together</h6>
-  <p class="mb-5 pb-4">
+  <!-- <p class="mb-5 pb-4">
   Got an idea? Let’s build something amazing—together.
-</p>
+</p> -->
 
 
         <div class="contact text-left">
             <div class="form">
-                <h6 class="subtitle"> Make your deadline, meet the target on time</h6>
+                <p class="subtitle" style="font-size: 13px;">Make your deadline, meet the target on time</p>
+
                 <h6 class="section-title mb-4">Get In Touch</h6>
                <form action="https://formsubmit.co/aniqatabassum409@gmail.com" method="POST" data-skip-recaptcha="true">
     <!-- Hidden inputs -->
